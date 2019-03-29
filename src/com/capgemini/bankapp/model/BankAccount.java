@@ -6,48 +6,70 @@ public class BankAccount {
 	private String accountHolderName;
 	private String accountType;
 	private double accountBalance;
-	
+
 	public BankAccount() {
 		super();
-		
+
 	}
-	public BankAccount(String accountHOlderName, String accountType, double accountBalance) {
+
+	public BankAccount(String accountHolderName, String accountType, double accountBalance) {
 		super();
-		this.accountHolderName = accountHOlderName;
+		this.accountHolderName = accountHolderName;
 		this.accountType = accountType;
 		this.accountBalance = accountBalance;
 	}
 	
+	public BankAccount(long accountId, String accountHolderName, String accountType) {
+		super();
+		this.accountId = accountId;
+		this.accountHolderName = accountHolderName;
+		this.accountType = accountType;
+	}
+
+	public BankAccount(long accountId, String accountHolderName, String accountType, double accountBalance) {
+		super();
+		this.accountId = accountId;
+		this.accountHolderName = accountHolderName;
+		this.accountType = accountType;
+		this.accountBalance = accountBalance;
+	}
+
 	public long getAccountId() {
 		return accountId;
 	}
+
 	public void setAccountId(long accountId) {
 		this.accountId = accountId;
 	}
-	public String getAccountHOlderName() {
+
+	public String getAccountHolderName() {
 		return accountHolderName;
 	}
-	public void setAccountHOlderName(String accountHOlderName) {
-		this.accountHolderName = accountHOlderName;
+
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
 	}
+
 	public String getAccountType() {
 		return accountType;
 	}
+
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
+
 	public double getAccountBalance() {
 		return accountBalance;
 	}
+
 	public void setAccountBalance(double accountBalance) {
 		this.accountBalance = accountBalance;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "BankAccount [accountId=" + accountId + ", accountHOlderName=" + accountHolderName + ", accountType="
+		return "BankAccount [accountId=" + accountId + ", accountHolderName=" + accountHolderName + ", accountType="
 				+ accountType + ", accountBalance=" + accountBalance + "]";
 	}
-	
-	
+
 }
